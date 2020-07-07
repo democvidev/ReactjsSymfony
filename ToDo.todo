@@ -1,0 +1,9 @@
+☐ Cheking
+    ✔ PHP version : 7.3.5 higer than 7.1 @done(20-07-06 15:23)
+    ✔ Composer version : 1.10.1 @done(20-07-06 15:23)
+    ✔ Symfony CLI(command line interface) version : 4.16.5 @done(20-07-06 15:23)
+    ✔ Define realpath_cache_size >= 5120 kilobytes @done(20-07-06 15:23)
+
+☐ Creating Symfony Application
+    ✔ Symfony 4.4 version @done(20-07-06 15:48)
+    ☐ Customize .env file (database) 
