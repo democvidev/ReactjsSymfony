@@ -7,3 +7,11 @@
 ☐ Creating Symfony Application
     ✔ Symfony 4.4 version @done(20-07-06 15:48)
     ☐ Customize .env file (database) 
+    ✔ Create a Default Controller @done(20-07-09 17:05)
+    ✔ Add get list users method @done(20-07-09 17:05)
+    ✔ Use Postman to check the JSON format @done(20-07-09 17:06)
+
+☐ Building the Frontend App with React
+    ✔ Install Webpack Encore @done(20-07-09 17:25)
+    ✔ Install yarn @done(20-07-09 17:25)
+    ✔ Use Yarn to install React, React-router, Axios and other dependencies. @done(20-07-09 17:25)
