@@ -18,17 +18,17 @@
     ✔ Configured Webpack Encore @done(20-07-09 17:31)
 
 ☐ Building React components
-    ☐ Create a new folder within the assets/js directory and name its components
-        ☐ Home.js: This component will be the homepage for the application and be used to display the contents from the public route to users.
-        ☐ Posts.js: This component will handle the fetching of contents from the JSONPlaceholder public API
-        ☐ Users.js: This component will be used to fetch and display the users’ list from the backend API created within our Symfony project
+    ✔ Create a new folder within the assets/js directory and name its components @done(20-07-10 11:09)
+        ✔ Home.js: This component will be the homepage for the application and be used to display the contents from the public route to users. @done(20-07-10 11:09)
+        ✔ Posts.js: This component will handle the fetching of contents from the JSONPlaceholder public API @done(20-07-10 11:09)
+        ✔ Users.js: This component will be used to fetch and display the users’ list from the backend API created within our Symfony project @done(20-07-10 11:09)
 
-☐ Update the AppComponent ( located in the ./assets/js/app.js)
-☐ Add a stylesheet (add some styles within ./assets/css/app.css)
+✔ Update the AppComponent ( located in the ./assets/js/app.js) @done(20-07-10 11:09)
+✔ Add a stylesheet (add some styles within ./assets/css/app.css) @done(20-07-10 11:09)
 
-☐ Create the HomeComponent by opening the ./assets/js/components/Home.js
-☐ Create the PostsComponent by opening the ./assets/js/components/Posts.js
-☐ Create the UsersComponent by opening the ./assets/js/components/Users.js
+✔ Create the HomeComponent by opening the ./assets/js/components/Home.js @done(20-07-10 11:09)
+✔ Create the PostsComponent by opening the ./assets/js/components/Posts.js @done(20-07-10 11:10)
+✔ Create the UsersComponent by opening the ./assets/js/components/Users.js @done(20-07-10 11:10)
 
 ☐ Update the Base Template in to templates/base.html.twig
     ☐ Build the assets, run:  yarn encore dev
