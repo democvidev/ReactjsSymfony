@@ -43,6 +43,7 @@ Encore
      * https://symfony.com/doc/current/frontend.html#adding-more-features
      */
     .cleanupOutputBeforeBuild()
+    // Enable notifications (webpack-notifier)
     .enableBuildNotifications()
     .enableSourceMaps(!Encore.isProduction())
     // enables hashed filenames (e.g. app.abc123.css)
@@ -55,7 +56,31 @@ Encore
     })
 
     // enables Sass/SCSS support
-    //.enableSassLoader()
+    // Use Sass/SCSS files (node-sass, sass-loader)
+    .enableSassLoader()
+    .addLoader({ test: /\.scss$/, loader: 'import-glob-loader' })
+
+    // Plugins
+    // .configureBabel((config) => {
+    // config.plugins.push(
+    // Enable using dynamic imports, using modular per-import chunks
+    // ['syntax-dynamic-import'],
+    // );
+    // })
+
+    // Presets
+    // .configureBabel((config) => {
+    // config.presets.push(
+    // Enable transpiling down to browser compatibility
+    // ['env', { targets: { browsers: ['last 2 versions', 'safari >= 7'] } }],
+    // Enable transpiling ES2015 to ES5 for uglifying non-ignored modules
+    // ['es2015'],
+    // Enable JSX/React
+    // ['react'],
+    // Enable ES6-strawman (babel-preset-*)
+    // ['stage-0'],
+    // );
+    // });
 
     // uncomment if you use TypeScript
     //.enableTypeScriptLoader()
@@ -65,7 +90,16 @@ Encore
     //.enableIntegrityHashes(Encore.isProduction())
 
     // uncomment if you're having problems with a jQuery plugin
-    //.autoProvidejQuery()
+    // jQuery is required for Materialize.js
+    .autoProvidejQuery()
+
+    // Main scripts and styles definition
+    //.createSharedEntry('app', './assets/app.jsx')
+
+    // Scene entries
+    // .addEntry('scenes/maintenance', './assets/scenes/Maintenance')
+    // .addEntry('scenes/demo/coreui', './assets/scenes/Demo/CoreUI')
+    // .addEntry('scenes/demo/materialize', './assets/scenes/Demo/Materialize')
 
     // uncomment if you use API Platform Admin (composer req api-admin)
     //.enableReactPreset()
@@ -73,3 +107,10 @@ Encore
     ;
 
 module.exports = Encore.getWebpackConfig();
+
+// const config = Encore.getWebpackConfig();
+
+// config.module.rules[0].exclude = /node_modules\/(?!(autotrack|dom-utils))/;
+
+// module.exports = config;
+
