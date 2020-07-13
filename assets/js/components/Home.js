@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Route, Switch, Redirect, Link, withRouter } from 'react-router-dom';
 import Users from './Users';
 import Posts from './Posts';
+import Articles from './Articles';
+
 
 class Home extends Component {
 
@@ -19,6 +21,10 @@ class Home extends Component {
                             <li className="nav-item">
                                 <Link className={"nav-link"} to={"/users"}> Users </Link>
                             </li>
+
+                            <li className="nav-item">
+                                <Link className={"nav-link"} to={"/articles"}> Articles </Link>
+                            </li>
                         </ul>
                     </div>
                 </nav>
@@ -26,6 +32,7 @@ class Home extends Component {
                     <Redirect exact from="/" to="/users" />
                     <Route path="/users" component={Users} />
                     <Route path="/posts" component={Posts} />
+                    <Route path="/articles" component={Articles} />
                 </Switch>
             </div>
         )
