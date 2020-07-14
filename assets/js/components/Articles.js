@@ -15,8 +15,8 @@ class Articles extends Component {
     }
 
     getUsers() {
-        axios.get(`https://localhost:8000/api/users`).then(users => {
-            this.setState({ users: users.data, loading: false })
+        axios.get(`https://localhost:8000/api/articles`).then(articles => {
+            this.setState({ articles: articles.data, loading: false })
         })
     }
 
@@ -39,13 +39,13 @@ class Articles extends Component {
                         ) : (
                                 <div className={'row'}>
                                     {this.state.articles.map(article =>
-                                        <div className="col-md-10 offset-md-1 row-block" key={articles.id}>
+                                        <div className="col-md-10 offset-md-1 row-block" key={article.id}>
                                             <ul id="sortable">
                                                 <li>
                                                     <div className="media">
                                                         <div className="media-body">
-                                                            <h4>Titre</h4>
-                                                            <p>uri</p>
+                                                            <h4>{article.title}</h4>
+                                                            <p>{article.uri}</p>
                                                         </div>
                                                     </div>
                                                 </li>
