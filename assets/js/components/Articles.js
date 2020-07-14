@@ -6,17 +6,17 @@ class Articles extends Component {
     constructor() {
         super();
 
-        this.state = { posts: [], loading: true }
+        this.state = { articles: [], loading: true }
     }
+
 
     componentDidMount() {
-        this.getPosts();
+        this.getUsers();
     }
 
-    getPosts() {
-        axios.get(`https://jsonplaceholder.typicode.com/posts/`).then(res => {
-            const posts = res.data.slice(0, 15);
-            this.setState({ posts, loading: false })
+    getUsers() {
+        axios.get(`https://localhost:8000/api/users`).then(users => {
+            this.setState({ users: users.data, loading: false })
         })
     }
 
@@ -27,8 +27,8 @@ class Articles extends Component {
                 <section className="row-section">
                     <div className="container">
                         <div className="row">
-                            <h2 className="text-center"><span>List of posts</span>Created with <i
-                                className="fa fa-heart"></i> by yemiwebby </h2>
+                            <h2 className="text-center"><span>Liste des articles</span>Créés avec l'<i
+                                className="fa fa-heart"></i> par cvidev </h2>
                         </div>
 
                         {loading ? (
@@ -38,14 +38,14 @@ class Articles extends Component {
 
                         ) : (
                                 <div className={'row'}>
-                                    {this.state.posts.map(post =>
-                                        <div className="col-md-10 offset-md-1 row-block" key={post.id}>
+                                    {this.state.articles.map(article =>
+                                        <div className="col-md-10 offset-md-1 row-block" key={articles.id}>
                                             <ul id="sortable">
                                                 <li>
                                                     <div className="media">
                                                         <div className="media-body">
-                                                            <h4>{post.title}</h4>
-                                                            <p>{post.body}</p>
+                                                            <h4>Titre</h4>
+                                                            <p>uri</p>
                                                         </div>
                                                     </div>
                                                 </li>
